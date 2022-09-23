@@ -10,8 +10,7 @@
       <li>Design: <a href="https://kumihan.com">Nobuyuki Takahiro</a></li>
     </ul>
   </footer>
-
-  <?php wp_footer(); ?>  
+  <?php wp_footer(); ?>
 </body>
 
 </html>
