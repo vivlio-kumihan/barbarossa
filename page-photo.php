@@ -9,11 +9,16 @@
 //   exit;
 // }
 // 画像収集
-$images = glob('./assets/img/thumbnail/*.jpg');
+$images = glob(esc_attr(get_template_directory_uri()) . '/assets/img/thumbnail/*.jpg');
 ?>
 
 
 <div id="container">
+  <?php
+  foreach ($images as $photo) {
+    echo $photo;
+  }
+  ?>
   <h1>Photography</h1>
 
   <div class="slider">
