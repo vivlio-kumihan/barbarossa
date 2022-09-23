@@ -14,10 +14,10 @@ session_start();
 
 // セッションで振り分け。
 if (!$_SESSION['email']) {
-  $host = $_SERVER['HTTP_HOST'];
-  $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-  header("Location: //$host$uri/login.php");
-  exit;
+  // $host = $_SERVER['HTTP_HOST'];
+  // $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+  // header("Location: //$host$uri/login.php");
+  // exit;
 
   // セッションに格納されているEメールアドレスから
   // 記入者のフルネームを割り出し変数に格納しておく。

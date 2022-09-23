@@ -45,17 +45,17 @@
           <label for="menu-btn-check" id="nav-black"></label>
           <div class="menu-content">
             <ul>
-              <li class="menu-bar-item"><a href="<?php echo get_template_directory_uri(); ?>/index.php">ホーム</a></li>
-              <li><a href="<?php echo get_template_directory_uri(); ?>/book.html">本</a></li>
-              <li><a href="<?php echo get_template_directory_uri(); ?>/typesetting.php">組版</a></li>
-              <li><a href="<?php echo get_template_directory_uri(); ?>/programming.php">プログラミング</a></li>
-              <li><a href="<?php echo get_template_directory_uri(); ?>/photo.php">写真</a></li>
-              <li><a class="sub-menu" href="<?php echo get_template_directory_uri(); ?>/member.php">メンバーページ</a>
+              <li class="menu-bar-item"><a href="<?php echo home_url(); ?>">ホーム</a></li>
+              <li class="menu-bar-item"><a href="/book">本</a></li>
+              <li class="menu-bar-item"><a href="/typesetting">組版</a></li>
+              <li class="menu-bar-item"><a href="/programming">プログラミング</a></li>
+              <li class="menu-bar-item"><a href="/photo">写真</a></li>
+              <li class="menu-bar-item"><a href="/member">メンバーページ</a>
                 <ul class="sub-menu">
-                  <li><a href="<?php echo get_template_directory_uri(); ?>/register.php">sign up</a></li>
-                  <li><a href="<?php echo get_template_directory_uri(); ?>/login.php">log in</a></li>
-                  <li><a href="<?php echo get_template_directory_uri(); ?>/contact.php">contact</a></li>
-                  <li><a href="<?php echo get_template_directory_uri(); ?>/board.php">bbs</a></li>
+                  <li class="menu-bar-item"><a href="/register">sign up</a></li>
+                  <li class="menu-bar-item"><a href="/login">log in</a></li>
+                  <li class="menu-bar-item"><a href="/contact">contact</a></li>
+                  <li class="menu-bar-item"><a href="/board">bbs</a></li>
                 </ul>
               </li>
             </ul>
@@ -72,16 +72,16 @@
         </h1>
         <ul class="menu-bar-lists">
           <li class="menu-bar-item"><a href="<?php echo home_url(); ?>">ホーム</a></li>
-          <li class="menu-bar-item"><a href="<?php echo get_template_directory_uri(); ?>/book.html">本</a></li>
-          <li class="menu-bar-item"><a href="<?php echo get_template_directory_uri(); ?>/typesetting.php">組版</a></li>
-          <li class="menu-bar-item"><a href="<?php echo get_template_directory_uri(); ?>/programming.php">プログラミング</a></li>
-          <li class="menu-bar-item"><a href="<?php echo get_template_directory_uri(); ?>/photo.php">写真</a></li>
-          <li class="menu-bar-item"><a href="<?php echo get_template_directory_uri(); ?>/member.php">メンバーページ</a>
+          <li class="menu-bar-item"><a href="/book">本</a></li>
+          <li class="menu-bar-item"><a href="/typesetting">組版</a></li>
+          <li class="menu-bar-item"><a href="/programming">プログラミング</a></li>
+          <li class="menu-bar-item"><a href="/photo">写真</a></li>
+          <li class="menu-bar-item"><a href="/member">メンバーページ</a>
             <ul class="sub-menu">
-              <li class="menu-bar-item"><a href="<?php echo get_template_directory_uri(); ?>/register.php">sign up</a></li>
-              <li class="menu-bar-item"><a href="<?php echo get_template_directory_uri(); ?>/login.php">log in</a></li>
-              <li class="menu-bar-item"><a href="<?php echo get_template_directory_uri(); ?>/contact.php">contact</a></li>
-              <li class="menu-bar-item"><a href="<?php echo get_template_directory_uri(); ?>/board.php">bbs</a></li>
+              <li class="menu-bar-item"><a href="/register">sign up</a></li>
+              <li class="menu-bar-item"><a href="/login">log in</a></li>
+              <li class="menu-bar-item"><a href="/contact">contact</a></li>
+              <li class="menu-bar-item"><a href="/board">bbs</a></li>
             </ul>
           </li>
         </ul>
