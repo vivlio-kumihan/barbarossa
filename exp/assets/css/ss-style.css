@@ -1,0 +1,701 @@
+@charset "utf-8";
+
+html {
+  font-size: 15px;
+  -webkit-text-size-adjust: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #555;
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.75;
+  -webkit-text-size-adjust: none;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 3rem;
+}
+
+body.home {
+  background: url(../img/banner.jpg) no-repeat center center / cover;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.greeting {
+  position: relative;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.logo {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.25rem;
+  color: whitesmoke;
+  z-index: 100;
+}
+
+.logo img,
+.logo span {
+  vertical-align: middle;
+}
+
+.logo img {
+  height: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .index-container {
+    max-width: 1200px;
+    margin: 3rem auto;
+  }
+}
+
+.hp-only {
+  display: block;
+}
+
+.pc-only {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .hp-only {
+    display: none;
+  }
+
+  .pc-only {
+    display: block;
+  }
+
+  .logo {
+    margin-left: 1rem;
+  }
+
+
+  .slogan {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+  }
+
+  .slogan .logo,
+  .slogan h3,
+  .slogan p {
+    text-align: center;
+    color: whitesmoke;
+    text-shadow:
+      0px 0px 10px rgba(0, 0, 0, 1)
+  }
+
+  .slogan img {
+    filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 1));
+  }
+
+  .slogan .logo img {
+    height: 2.75rem;
+  }
+
+  .slogan .logo {
+    padding-right: 1.25rem;
+    font-size: 2rem;
+  }
+
+  .slogan h3 {
+    margin: 0.75rem 0rem 0.75rem;
+    padding-left: 0.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #fff;
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 400;
+    font-size: 3.5rem;
+    letter-spacing: 0.5rem;
+  }
+
+  .slogan p {
+    margin-top: 1.5rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 2;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 0rem;
+  }
+
+  .slogan p:last-child {
+    margin-top: 1.5rem;
+  }
+}
+
+
+/**************** PC header ****************/
+/**************** メニューバー ****************/
+@media screen and (min-width:768px) {
+  .menu-bar {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+    background-color: rgba(238, 62, 83, 0.7);
+  }
+
+  .menu-bar {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-bar h1,
+  .menu-bar a {
+    color: whitesmoke;
+  }
+  .menu-bar a {
+    padding: 0.5rem 0.5rem;
+  }
+
+  .menu-bar-lists {
+    display: block;
+    margin: 0;
+  }
+  
+  .menu-bar-item {
+    position: relative;
+    
+    display: inline-block;
+    margin: 0;
+    padding: 0 0.5rem;
+    padding-bottom: 0;
+  }
+  
+  .menu-bar-item:hover {
+    background-color: rgb(111, 29, 38);
+  }
+
+  .menu-bar-item a {
+    display: block;
+  }
+  
+  ul.sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: rgba(238, 62, 83, 0.7);
+    text-align: center;
+  }
+
+  ul.sub-menu .menu-bar-item {
+    width: 100%;
+  }
+  
+  ul .menu-bar-item:hover>ul.sub-menu {
+    display: block;
+  }
+
+  .menu-bar-item a:hover {
+    color: rgb(181, 47, 63);
+  }
+}
+/**************** メニューバー ここまで ****************/
+
+
+/**************** ハンバーガーメニュー ****************/
+.hamburger-menu-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(238, 62, 83, 0.7);
+}
+
+.logo {
+  margin-left: 1rem;
+  font-size: 1rem;
+  letter-spacing: 0.125rem;
+}
+
+.logo img {
+  height: 1.75rem;
+}
+
+/* 3本線のハンバーガーメニューボタンをここじ実装 */
+.menu-btn {
+  /* fixしたら高さを決めてやらないと上下センターが効かなくなる。 */
+  position: fixed;
+  top: 0;
+  right: 0;
+  
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(238, 62, 83, 0.3);
+
+  display: flex;
+  margin-right: 1rem;
+  padding-right: 0.5rem;
+  border-radius: 0.25rem;
+
+  justify-content: right;
+  align-items: center;
+  z-index: 100;
+}
+
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 2rem;
+  border-radius: 3px;
+  background-color: #ffffff;
+  position: absolute;
+}
+
+/* メニューの線、最初を表示 */
+/* 真ん中の線を『bottom』としてそこから8px『上げる』。 */
+.menu-btn span:before {
+  bottom: 8px;
+}
+
+/* メニューの線、最後を表示 */
+/* 真ん中の線を『top』としてそこから8px『下げる』。 */
+.menu-btn span:after {
+  top: 8px;
+}
+
+/* 3本線を✖️にする。 */
+/*メニューオープン時は真ん中の線を透明にする*/
+#menu-btn-check:checked~.menu-btn span {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#menu-btn-check:checked~.menu-btn span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#menu-btn-check:checked~.menu-btn span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* ハンバーガーメニューの実装を確認したら
+   チェックボックスは隠す。 */
+#menu-btn-check {
+  display: none;
+}
+
+/* ハンバーガーメニューの中身を表示する。 */
+.menu-content {
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 80;
+  background-color: #941640;
+}
+
+.menu-content ul {
+  padding: 4rem 1rem 0;
+}
+
+ul.sub-menu {
+  padding: 0;
+}
+ul.sub-menu li:first-child {
+  border-top: 1px dotted #ffffff;
+}
+
+.menu-content ul li {
+  border-bottom: solid 1px #ffffff;
+  list-style: none;
+}
+
+ul .sub-menu li {
+  padding-left: 2rem;
+  border-bottom: 1px dotted #ffffff;
+}
+
+ul .sub-menu li:last-child {
+  border-bottom: none;
+}
+
+.menu-content ul li a {
+  display: block;
+  width: 100%;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  padding: 9px 15px 10px 0;
+  position: relative;
+}
+
+.menu-content ul li a::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-top: solid 2px #ffffff;
+  border-right: solid 2px #ffffff;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 11px;
+  top: 16px;
+}
+
+/* リスト表記を常は隠す。 */
+.menu-content {
+  width: 70%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  /*leftの値を変更してメニューを画面外へ*/
+  left: -100%;
+  z-index: 80;
+  background-color: #941640;
+  /*アニメーション設定*/
+  transition: all 0.5s;
+}
+
+#nav-black {
+  display: none;
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#menu-btn-check:checked~#nav-black {
+  display: block;
+}
+
+#menu-btn-check:checked~.menu-content {
+  /*メニューを画面内へ*/
+  left: 0;
+}
+/**************** ハンバーガーメニュー ここまで ****************/
+
+
+/**************** バナー ****************/
+#banner {
+  /* headerに対して絶対的に設定している。 */
+  position: absolute;
+  top: 0%;
+  left: 0%;
+
+  width: 100vw;
+  z-index: -100;
+}
+
+.main-visual {
+  position: relative;
+  background: url(../img/banner.jpg) no-repeat center center / cover;
+  height: 100vh;
+}
+
+@media screen and (max-width:767px) {
+  .slogan {
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+  }
+
+  .slogan .logo,
+  .slogan h3,
+  .slogan p {
+    text-align: center;
+    color: whitesmoke;
+    text-shadow:
+      0px 0px 10px rgba(0, 0, 0, 1)
+  }
+
+  .slogan img {
+    filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 1));
+  }
+
+  .slogan .logo img {
+    height: 3.5rem;
+  }
+
+  .slogan .logo {
+    padding-right: 1.25rem;
+    font-size: 2rem;
+  }
+
+  .slogan h3 {
+    margin: 0.75rem 0rem 0.75rem;
+    padding-left: 0.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #fff;
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    letter-spacing: 0.5rem;
+  }
+
+  .slogan p {
+    margin-top: 1.5rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.7;
+    letter-spacing: 0rem;
+  }
+
+  .slogan p:last-child {
+    margin-top: 0.5rem;
+  }
+}
+
+
+/**************** バナー ここまで ****************/
+
+
+/**************** POSTでのエントリー関連 ****************/
+
+/* body */
+/* なぜこんな設定をしたのか覚えていない。 */
+/* body#entrance {
+  background: #e9e9e9;
+  color: #5e5e5e;
+} */
+
+/* Form Layout */
+.entrance-form-wrapper {
+  position: relative;
+  background: #fafafa;
+  margin: 0 auto;
+  padding: 2rem 1rem 1rem;
+  /* max-width: 370px; */
+  height: 100vh;
+}
+
+.entrance-form-wrapper h1 {
+  text-align: center;
+  padding: 1em 0;
+  font-family: 'Anton', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.entrance-form-wrapper h3 {
+  margin-bottom: 2rem;
+  font-size: 1.15rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.entrance-form-wrapper p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.entrance-form-wrapper .complete {
+  text-align: center;
+}
+.entrance-form-wrapper .complete i {
+  margin-bottom: 0.5rem;
+  font-size: 5rem;
+  color: rgb(255, 185, 185);
+}
+
+.form-item {
+  margin-bottom: 0.75em;
+  width: 100%;
+}
+
+#full-name {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-item input {
+  background: #fafafa;
+  border: none;
+  border-bottom: 2px solid #e9e9e9;
+  color: #666;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  height: 50px;
+  transition: border-color 0.3s;
+  width: 100%;
+}
+
+.form-item input:focus {
+  border-bottom: 2px solid #c0c0c0;
+  outline: none;
+}
+
+.form-item textarea{
+  max-width: 100%;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 1.05rem;
+  border: 1px solid #fd1933;
+  border-radius: 0.5rem;
+}
+
+.form-item textarea:focus {
+  border: 1px solid #fff;
+  border-radius: 0.5rem;
+  outline: 0;
+  box-shadow:
+    0px 0px 1.4px rgba(253, 25, 51, 0.07),
+    0px 0px 3.1px rgba(253, 25, 51, 0.054),
+    0px 0px 5.3px rgba(253, 25, 51, 0.047),
+    0px 0px 8.2px rgba(253, 25, 51, 0.042),
+    0px 0px 12.2px rgba(253, 25, 51, 0.037),
+    0px 0px 17.9px rgba(253, 25, 51, 0.033),
+    0px 0px 26.8px rgba(253, 25, 51, 0.028),
+    0px 0px 42.7px rgba(253, 25, 51, 0.023),
+    0px 0px 80px rgba(253, 25, 51, 0.016);
+}
+
+.form-item i {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.form-item .contact-form-confirm-mesg {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.button-panel {
+  margin: 2em 0 0;
+  width: 100%;
+}
+
+.button-panel .button {
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95em;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: #fff;
+  border: none;
+  background: #f16272;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  transition: background 0.3s ease-in-out;
+}
+
+.button:hover {
+  background: #ee3e52;
+}
+
+.form-footer {
+  padding: 2em 0;
+  text-align: center;
+}
+
+.form-footer p {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.form-footer a {
+  color: #941640;
+  text-decoration: none;
+  transition: border-color 0.3s;
+}
+
+.form-footer a:hover {
+  border-bottom: 1px dotted #8c8c8c;
+}
+
+.form-footer i {
+  margin-left: 0.5rem;
+}
+
+/* アラーなど */
+.alert {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 30%);
+  width: 80%;
+  padding: 1rem 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.25;
+  color: #941640;
+  background-color: rgb(255, 185, 185);
+  border-radius: 0.5rem;
+  z-index: 100;
+  box-shadow:
+  1.7px 1.2px 2.2px rgba(0, 0, 0, 0.031),
+  4px 2.9px 5.3px rgba(0, 0, 0, 0.044),
+  7.5px 5.5px 10px rgba(0, 0, 0, 0.055),
+  13.4px 9.8px 17.9px rgba(0, 0, 0, 0.066),
+  25.1px 18.4px 33.4px rgba(0, 0, 0, 0.079),
+  60px 44px 80px rgba(0, 0, 0, 0.11);
+}
+
+.report_mesg {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 30%);
+  width: 80%;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.25;
+  color: #0158f8;
+  background-color: rgb(185, 227, 255);
+  border-radius: 0.5rem;
+  z-index: 100;
+  box-shadow:
+  1.7px 1.2px 2.2px rgba(0, 0, 0, 0.031),
+  4px 2.9px 5.3px rgba(0, 0, 0, 0.044),
+  7.5px 5.5px 10px rgba(0, 0, 0, 0.055),
+  13.4px 9.8px 17.9px rgba(0, 0, 0, 0.066),
+  25.1px 18.4px 33.4px rgba(0, 0, 0, 0.079),
+  60px 44px 80px rgba(0, 0, 0, 0.11);
+}
+/**************** POSTでのエントリー関連 ここまで ****************/
+
+.report_mesg a {
+  font-weight: 700;
+  color: #555;
+  text-decoration: none;
+}
