@@ -14,17 +14,41 @@ $images = glob(esc_attr(get_template_directory_uri()) . '/assets/img/thumbnail/*
 
 
 <div id="container">
-  <?php
-  foreach ($images as $photo) {
-    echo $photo;
-  }
-  ?>
+  <?php foreach ($images as $photo) { ?>
+    <?php echo $photo; ?>
+  <?php } ?>
   <h1>Photography</h1>
 
+  <?php
+  $var = "hello1";
+  echo $var;
+  $array = array("foo", "bar", "hello", "world");
+  foreach ($array as $i) {
+    echo $i . '<br>';
+  }
+
+  // $base_uri = get_template_directory_uri();
+  // $uri = "$base_uri/assets/img";
+  // $url = $uri . "/*.jpg";
+  // echo $url;
+  // $images = glob(($uri . "/*"));
+
+  $images = glob("./assets/img/thumbnail/*.jpg");
+  foreach ($images as $img) {
+    echo $img . '<br>';
+  }
+
+  // いろいろとやったが、globをwpは理解できてない。
+  // さて、どう解決する？
+  ?>
+
+
+  <p>hello2</p>
+
   <div class="slider">
-    <div><img src="./assets/img/photo1.jpg" alt=""> </div>
-    <div><img src="./assets/img/photo2.jpg" alt=""> </div>
-    <div><img src="./assets/img/photo3.jpg" alt=""> </div>
+    <div><img src="<?php echo get_template_directory_uri() ?>/assets/img/photo1.jpg" alt=""> </div>
+    <div><img src="<?php echo get_template_directory_uri() ?>/assets/img/photo2.jpg" alt=""> </div>
+    <div><img src="<?php echo get_template_directory_uri() ?>/assets/img/photo3.jpg" alt=""> </div>
   </div>
 
   <button class="header-button"><span></span></button>
