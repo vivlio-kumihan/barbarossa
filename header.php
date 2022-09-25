@@ -1,10 +1,10 @@
 <?php
 ?>
 <!DOCTYPE html>
-<html lang="<?php bloginfo('language'); ?>">
+<html lang="ja">
 
 <head>
-  <meta charset="<?php bloginfo('charaset'); ?>">
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>kumihan.com(仮)</title>
@@ -28,10 +28,9 @@
       $('.slider').bxSlider();
     });
   </script>
-  <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body>
   <header>
     <div class="hp-only">
       <div class="hamburger-menu-container">
@@ -45,17 +44,17 @@
           <label for="menu-btn-check" id="nav-black"></label>
           <div class="menu-content">
             <ul>
-              <li class="menu-bar-item"><a href="<?php echo home_url(); ?>">ホーム</a></li>
-              <li class="menu-bar-item"><a href="/book">本</a></li>
-              <li class="menu-bar-item"><a href="/typesetting">組版</a></li>
-              <li class="menu-bar-item"><a href="/programming">プログラミング</a></li>
-              <li class="menu-bar-item"><a href="/photo">写真</a></li>
-              <li class="menu-bar-item"><a href="/member">メンバーページ</a>
+              <li><a href="/index.php">ホーム</a></li>
+              <li><a href="/book.php">本</a></li>
+              <li><a href="/typesetting.php">組版</a></li>
+              <li><a href="/programming.php">プログラミング</a></li>
+              <li><a href="/photo.php">写真</a></li>
+              <li><a class="sub-menu" href="/member.php">メンバーページ</a>
                 <ul class="sub-menu">
-                  <li class="menu-bar-item"><a href="/register">sign up</a></li>
-                  <li class="menu-bar-item"><a href="/login">log in</a></li>
-                  <li class="menu-bar-item"><a href="/contact">contact</a></li>
-                  <li class="menu-bar-item"><a href="/board">bbs</a></li>
+                  <li><a href="/register.php">sign up</a></li>
+                  <li><a href="/login.php">log in</a></li>
+                  <li><a href="/contact.php">contact</a></li>
+                  <li><a href="/board.php">bbs</a></li>
                 </ul>
               </li>
             </ul>
@@ -71,17 +70,17 @@
           <span>kumihan.com</span>
         </h1>
         <ul class="menu-bar-lists">
-          <li class="menu-bar-item"><a href="<?php echo home_url(); ?>">ホーム</a></li>
-          <li class="menu-bar-item"><a href="/book">本</a></li>
-          <li class="menu-bar-item"><a href="/typesetting">組版</a></li>
-          <li class="menu-bar-item"><a href="/programming">プログラミング</a></li>
-          <li class="menu-bar-item"><a href="/photo">写真</a></li>
-          <li class="menu-bar-item"><a href="/member">メンバーページ</a>
+          <li class="menu-bar-item"><a href="/index.php">ホーム</a></li>
+          <li class="menu-bar-item"><a href="/book.php">本</a></li>
+          <li class="menu-bar-item"><a href="/typesetting.php">組版</a></li>
+          <li class="menu-bar-item"><a href="/programming.php">プログラミング</a></li>
+          <li class="menu-bar-item"><a href="/photo.php">写真</a></li>
+          <li class="menu-bar-item"><a href="/member.php">メンバーページ</a>
             <ul class="sub-menu">
-              <li class="menu-bar-item"><a href="/register">sign up</a></li>
-              <li class="menu-bar-item"><a href="/login">log in</a></li>
-              <li class="menu-bar-item"><a href="/contact">contact</a></li>
-              <li class="menu-bar-item"><a href="/board">bbs</a></li>
+              <li class="menu-bar-item"><a href="/register.php">sign up</a></li>
+              <li class="menu-bar-item"><a href="/login.php">log in</a></li>
+              <li class="menu-bar-item"><a href="/contact.php">contact</a></li>
+              <li class="menu-bar-item"><a href="/board.php">bbs</a></li>
             </ul>
           </li>
         </ul>

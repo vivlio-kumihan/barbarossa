@@ -19,10 +19,10 @@ if (!$_SESSION['email']) {
   <link rel="stylesheet" href="./assets/css/reset.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
   <link rel="stylesheet" href="./assets/css/fonts.css" />
+  <link rel="stylesheet" href="./assets/css/modaal.min.css" />
   <link rel="stylesheet" href="./assets/css/ss-style.css" />
   <link rel="stylesheet" href="./assets/css/ss-style-pages-org.css" />
   <link rel="stylesheet" href="./assets/css/ss-style-borad.css" />
-  <link rel="stylesheet" href="./assets/css/modaal.min.css" />
   <script src="https://kit.fontawesome.com/678cad97f5.js" crossorigin="anonymous" defer></script>
   <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous" defer></script>
   <script src="./assets/js/modaal.min.js" defer></script>
@@ -43,7 +43,8 @@ if (!$_SESSION['email']) {
           <label for="menu-btn-check" id="nav-black"></label>
           <div class="menu-content">
             <ul>
-              <li><a href="./book.html">本</a></li>
+              <li><a href="./index.php">ホーム</a></li>
+              <li><a href="./book.php">本</a></li>
               <li><a href="./typesetting.php">組版</a></li>
               <li><a href="./programming.php">プログラミング</a></li>
               <li><a href="./photo.php">写真</a></li>
@@ -68,7 +69,8 @@ if (!$_SESSION['email']) {
           <span>kumihan.com</span>
         </h1>
         <ul class="menu-bar-lists">
-          <li class="menu-bar-item"><a href="./book.html">本</a></li>
+          <li class="menu-bar-item"><a href="./index.php">ホーム</a></li>
+          <li class="menu-bar-item"><a href="./book.php">本</a></li>
           <li class="menu-bar-item"><a href="./typesetting.php">組版</a></li>
           <li class="menu-bar-item"><a href="./programming.php">プログラミング</a></li>
           <li class="menu-bar-item"><a href="./photo.php">写真</a></li>
@@ -85,8 +87,9 @@ if (!$_SESSION['email']) {
     </div>
   </header>
 
-  <div id="container">
-    <h1>kumihanBBS</h1>
+  <main class="entrance-form-wrapper">
+
+    <h1>BBS</h1>
 
     <?php
     if ($err_mesg) {
@@ -131,7 +134,7 @@ if (!$_SESSION['email']) {
         <?php } ?>
       </ul>
     </div>
-  </div>
+  </main>
 
   <footer></footer>
 </body>

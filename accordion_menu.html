@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="discription" content="MdNコーポレーションの書籍「初心者からちゃんとしたプロになる Webデザイン基礎入門」の紹介をするホームページです。">
+  <title>Utilities</title>
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/fonts.css" />
+  <link rel="stylesheet" href="./assets/css/ss-style.css" />
+  <link rel="stylesheet" href="./assets/css/accordion_menu.css" />
+</head>
+
+<body>
+  <div id="acc-menu">
+    <form> 
+      <label>
+        <!-- 『checked』オプションを入れるとデフォルトひ開いた状態に出来る。 -->
+        <!-- <input type="radio" name="btn" checked /> -->
+        <input type="radio" name="btn" />
+        <div class="first-level">
+          <h3><a href="./book.php">本</a></h3>
+        </div>
+      </label>
+      <label>
+        <input type="radio" name="btn" />
+        <div class="first-level">
+          <h3><a href="./photo.php">写真</a></h3>
+        </div>
+      </label>
+      <label>
+        <input type="radio" name="btn" />
+        <div class="first-level">
+          <h3><a href="./#">組版</a></h3>
+        </div>
+      </label>
+      <label>
+        <input type="radio" name="btn" />
+        <div class="first-level">
+          <h3><a href="./#">プログラミング</a></h3>
+        </div>
+      </label>
+      <label>
+        <input type="radio" name="btn" />
+        <div class="first-level">
+          <h3>メンバーページ</h3>
+          <ul>
+            <li><a href="./index.php">ホーム</a></li>
+            <li><a href="./member.php">メンバーページ</a></li>
+            <li><a href="./blog.php">管理者ブログ</a></li>
+            <li><a href="./board.php">BBS</a></li>
+            <li><a href="./contact.php">問い合せ</a></li>
+            <li><a href="./register.php">サインアップ</a></li>
+            <li><a href="./login.php">ログイン</a></li>
+            <li><a href="./logout.php">ログアウト</a></li>
+          </ul>
+        </div>
+      </label>
+    </form> 
+  </div>
+
+  <script src="https://kit.fontawesome.com/678cad97f5.js" crossorigin="anonymous"></script>
+</body>
+</html>
